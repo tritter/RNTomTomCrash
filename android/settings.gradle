@@ -1,0 +1,17 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+rootProject.name = 'TomTomTest'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+includeBuild('../node_modules/@react-native/gradle-plugin')
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://repositories.tomtom.com/artifactory/maven")
+        }
+    }
+}

@@ -1,2 +1,43 @@
-# RNTomTomCrash
-New SDK of TomTom is crashing directly when built with RN, this is a demo project just showing that.
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+
+# Getting Started
+
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+
+## Step 1: Start the Metro Server
+
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+
+To start Metro, run the following command from the _root_ of your React Native project:
+
+```bash
+# using npm
+npm start
+
+# OR using Yarn
+yarn start
+```
+
+## Step 2: Start your Application
+
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+
+### For Android
+
+```bash
+# using npm
+npm run android
+
+# OR using Yarn
+yarn android
+```
+
+### TomTom SDK
+
+Bare minimum to demonstrate crash of Android TomTomSDK.
+
+To check new releases:
+1. Update version inside android/app/build.gradle:122
+1. Add API key to MainActivity.kt:32
+1. Run app
+1. Hopefully works usually crashes after the globe :(
